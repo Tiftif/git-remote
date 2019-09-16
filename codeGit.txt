@@ -1,0 +1,52 @@
+gab@Gab:~/workspace/git/git_fundamentals$ git remote add origin https://github.com/Tiftif/git-remote.git
+gab@Gab:~/workspace/git/git_fundamentals$ git remote -v
+origin	https://github.com/Tiftif/git-remote.git (fetch)
+origin	https://github.com/Tiftif/git-remote.git (push)
+gab@Gab:~/workspace/git/git_fundamentals$ git checkout master
+Basculement sur la branche 'master'
+gab@Gab:~/workspace/git/git_fundamentals$ git push -u origin master
+Username for 'https://github.com': Tiftif
+Password for 'https://Tiftif@github.com': 
+Décompte des objets: 3, fait.
+Écriture des objets: 100% (3/3), 209 bytes | 209.00 KiB/s, fait.
+Total 3 (delta 0), reused 0 (delta 0)
+To https://github.com/Tiftif/git-remote.git
+ * [new branch]      master -> master
+La branche 'master' est paramétrée pour suivre la branche distante 'master' depuis 'origin'.
+gab@Gab:~/workspace/git/git_fundamentals$ git pull origin wcs
+fatal: Couldn't find remote ref wcs
+gab@Gab:~/workspace/git/git_fundamentals$ git status
+Sur la branche master
+Votre branche est à jour avec 'origin/master'.
+
+rien à valider, la copie de travail est propre
+gab@Gab:~/workspace/git/git_fundamentals$ git checkout master
+Déjà sur 'master'
+Votre branche est à jour avec 'origin/master'.
+gab@Gab:~/workspace/git/git_fundamentals$ git pull origin master
+Depuis https://github.com/Tiftif/git-remote
+ * branch            master     -> FETCH_HEAD
+Déjà à jour.
+gab@Gab:~/workspace/git/git_fundamentals$ git merge wcs
+Mise à jour 3c3933f..737783a
+Fast-forward
+ wild.php | 0
+ 1 file changed, 0 insertions(+), 0 deletions(-)
+ create mode 100644 wild.php
+gab@Gab:~/workspace/git/git_fundamentals$ git status
+Sur la branche master
+Votre branche est en avance sur 'origin/master' de 1 commit.
+  (utilisez "git push" pour publier vos commits locaux)
+
+rien à valider, la copie de travail est propre
+gab@Gab:~/workspace/git/git_fundamentals$ git push
+Username for 'https://github.com': Tiftif
+Password for 'https://Tiftif@github.com': 
+Décompte des objets: 2, fait.
+Delta compression using up to 8 threads.
+Compression des objets: 100% (2/2), fait.
+Écriture des objets: 100% (2/2), 244 bytes | 244.00 KiB/s, fait.
+Total 2 (delta 0), reused 0 (delta 0)
+To https://github.com/Tiftif/git-remote.git
+   3c3933f..737783a  master -> master
+
